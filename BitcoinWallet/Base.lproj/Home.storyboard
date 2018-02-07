@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="BitcoinWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zru-Ia-I3N">
+                                <rect key="frame" x="32" y="173.5" width="311" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdQ-Wv-tnf">
+                                <rect key="frame" x="31.5" y="202" width="311" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeE-AP-Ppb">
+                                <rect key="frame" x="32" y="226" width="311" height="50"/>
+                                <color key="backgroundColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="y2O-WD-7oZ"/>
+                                </constraints>
+                                <state key="normal" title="Generate">
+                                    <color key="titleColor" red="0.95664626359939575" green="0.81692922115325928" blue="0.030066389590501785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SNM-iD-vXp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uS-2h-DU9">
+                                <rect key="frame" x="32" y="361" width="311" height="50"/>
+                                <color key="backgroundColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cbF-tB-OVc"/>
+                                </constraints>
+                                <state key="normal" title="Show">
+                                    <color key="titleColor" red="0.95664626359939575" green="0.81692922115325928" blue="0.030066389590501785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oyc-Zt-Bns"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFM-DH-IYI">
+                                <rect key="frame" x="32.5" y="308" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet's private key" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKb-su-HzD">
+                                <rect key="frame" x="32" y="337" width="311" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Xa-jj-Lqa">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0zZ-NU-To2"/>
+                                </constraints>
+                                <state key="normal" title="Recreate &gt;&gt;">
+                                    <color key="titleColor" red="0.95664626359939575" green="0.81692922115325928" blue="0.030066389590501785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="recreateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BfW-jx-aXy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to recreate Wallet address based on the same key?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qek-K4-Yjf">
+                                <rect key="frame" x="32" y="577.5" width="311" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99564260240000002" green="0.96636444330000004" blue="0.85151320699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bdQ-Wv-tnf" firstAttribute="top" secondItem="zru-Ia-I3N" secondAttribute="bottom" constant="8" symbolic="YES" id="2Rn-hZ-230"/>
+                            <constraint firstItem="aeE-AP-Ppb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-64" id="61R-hD-W9H"/>
+                            <constraint firstItem="Qek-K4-Yjf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-64" id="912-bx-gKm"/>
+                            <constraint firstItem="0Xa-jj-Lqa" firstAttribute="top" secondItem="Qek-K4-Yjf" secondAttribute="bottom" constant="8" symbolic="YES" id="Dvf-Jf-zV9"/>
+                            <constraint firstItem="0Xa-jj-Lqa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GA7-mk-zq3"/>
+                            <constraint firstItem="zru-Ia-I3N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IBt-g5-4fv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Xa-jj-Lqa" secondAttribute="bottom" id="R2e-QO-jka"/>
+                            <constraint firstItem="oKb-su-HzD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S9c-KG-YZ2"/>
+                            <constraint firstItem="9uS-2h-DU9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TLd-yZ-qEI"/>
+                            <constraint firstItem="0Xa-jj-Lqa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="VCy-45-aTq"/>
+                            <constraint firstItem="WFM-DH-IYI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZEN-hB-y7h"/>
+                            <constraint firstItem="9uS-2h-DU9" firstAttribute="width" secondItem="oKb-su-HzD" secondAttribute="width" id="ZT2-ui-TDQ"/>
+                            <constraint firstItem="aeE-AP-Ppb" firstAttribute="top" secondItem="bdQ-Wv-tnf" secondAttribute="bottom" constant="8" symbolic="YES" id="Zmr-y4-XOb"/>
+                            <constraint firstItem="oKb-su-HzD" firstAttribute="top" secondItem="WFM-DH-IYI" secondAttribute="bottom" constant="8" symbolic="YES" id="bbN-Pf-oOe"/>
+                            <constraint firstItem="aeE-AP-Ppb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dSl-Iu-sNZ"/>
+                            <constraint firstItem="oKb-su-HzD" firstAttribute="width" secondItem="WFM-DH-IYI" secondAttribute="width" id="ePJ-tt-s9w"/>
+                            <constraint firstItem="WFM-DH-IYI" firstAttribute="top" secondItem="aeE-AP-Ppb" secondAttribute="bottom" constant="32" id="hFE-kt-412"/>
+                            <constraint firstItem="Qek-K4-Yjf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ilP-4T-3h0"/>
+                            <constraint firstItem="zru-Ia-I3N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="nUu-XO-DhA"/>
+                            <constraint firstItem="WFM-DH-IYI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-64" id="ofh-63-c4U"/>
+                            <constraint firstItem="zru-Ia-I3N" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-64" id="p5p-u0-AXy"/>
+                            <constraint firstItem="bdQ-Wv-tnf" firstAttribute="width" secondItem="zru-Ia-I3N" secondAttribute="width" id="roj-sN-gYZ"/>
+                            <constraint firstItem="bdQ-Wv-tnf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sEy-bZ-22i"/>
+                            <constraint firstItem="9uS-2h-DU9" firstAttribute="top" secondItem="oKb-su-HzD" secondAttribute="bottom" constant="8" symbolic="YES" id="zW6-XQ-9Mi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="generateAddressButton" destination="aeE-AP-Ppb" id="hCb-J4-MkX"/>
+                        <outlet property="recreateAddressButton" destination="0Xa-jj-Lqa" id="o4C-ds-y59"/>
+                        <outlet property="recreateAddressLabel" destination="Qek-K4-Yjf" id="h6y-Wc-E14"/>
+                        <outlet property="showKeyButton" destination="9uS-2h-DU9" id="o97-3E-WeI"/>
+                        <outlet property="walletAddressLabel" destination="zru-Ia-I3N" id="zgd-hW-erh"/>
+                        <outlet property="walletKeyLabel" destination="WFM-DH-IYI" id="wQD-GD-wm3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

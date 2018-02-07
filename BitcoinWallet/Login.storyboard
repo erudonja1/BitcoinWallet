@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XZI-4U-3YM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="t2f-NN-Oyp">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XZI-4U-3YM" customClass="LoginViewController" customModule="BitcoinWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RcS-Cy-FIs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dj0-F5-rtA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lg8-Qo-EyA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1O-Sf-5Fg">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="XZI-4U-3YM" eventType="touchUpInside" id="1vj-nq-5I6"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PIN code" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ElD-np-9Ra">
+                                <rect key="frame" x="32" y="318" width="311" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEx-TF-klT">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ywD-so-rSt"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.95664626359939575" green="0.81692922115325928" blue="0.030066389590501785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="XZI-4U-3YM" eventType="touchUpInside" id="RRN-AO-2Rg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrB-Qf-dQ2">
+                                <rect key="frame" x="102" y="356" width="170" height="30"/>
+                                <state key="normal" title="Reset existing PIN code?">
+                                    <color key="titleColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="XZI-4U-3YM" eventType="touchUpInside" id="PeJ-02-ZGb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99564260240000002" green="0.96636444330000004" blue="0.85151320699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ElD-np-9Ra" firstAttribute="centerX" secondItem="lg8-Qo-EyA" secondAttribute="centerX" id="C5X-Ww-o6M"/>
+                            <constraint firstItem="QrB-Qf-dQ2" firstAttribute="top" secondItem="ElD-np-9Ra" secondAttribute="bottom" constant="8" id="CLU-q9-rMN"/>
+                            <constraint firstItem="K1O-Sf-5Fg" firstAttribute="top" secondItem="RcS-Cy-FIs" secondAttribute="bottom" id="fBt-8H-h56"/>
+                            <constraint firstAttribute="trailing" secondItem="ElD-np-9Ra" secondAttribute="trailing" constant="32" id="hwx-7H-92L"/>
+                            <constraint firstItem="Dj0-F5-rtA" firstAttribute="top" secondItem="cEx-TF-klT" secondAttribute="bottom" id="inc-yd-UxV"/>
+                            <constraint firstItem="cEx-TF-klT" firstAttribute="width" secondItem="lg8-Qo-EyA" secondAttribute="width" id="lCA-Rw-GU8"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="K1O-Sf-5Fg" secondAttribute="leading" id="mR2-2A-Kdi"/>
+                            <constraint firstItem="ElD-np-9Ra" firstAttribute="leading" secondItem="lg8-Qo-EyA" secondAttribute="leading" constant="32" id="nz5-P8-gmT"/>
+                            <constraint firstItem="cEx-TF-klT" firstAttribute="centerX" secondItem="lg8-Qo-EyA" secondAttribute="centerX" id="vix-aF-MRQ"/>
+                            <constraint firstItem="ElD-np-9Ra" firstAttribute="centerY" secondItem="lg8-Qo-EyA" secondAttribute="centerY" id="xHZ-Kx-9RS"/>
+                            <constraint firstItem="QrB-Qf-dQ2" firstAttribute="centerX" secondItem="lg8-Qo-EyA" secondAttribute="centerX" id="yGK-V8-bGB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pinCodeTextField" destination="ElD-np-9Ra" id="DGy-Pa-iK0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AhX-6O-1Q1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="138"/>
+        </scene>
+    </scenes>
+</document>

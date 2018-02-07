@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0rb-Mn-YU6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Registration View Controller-->
+        <scene sceneID="IWG-zH-LzE">
+            <objects>
+                <viewController storyboardIdentifier="RegistrationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0rb-Mn-YU6" customClass="RegistrationViewController" customModule="BitcoinWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qzn-8M-oBN"/>
+                        <viewControllerLayoutGuide type="bottom" id="LUX-8G-Ej1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q77-3Y-CfF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Kn-dZ-mfM">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.10538043722268749" green="0.43128906249999999" blue="0.32103651148437695" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="0rb-Mn-YU6" eventType="touchUpInside" id="TYa-QB-KZq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeO-aA-CvM">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sPB-7B-HqY"/>
+                                </constraints>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="0.95664626359939575" green="0.81692922115325928" blue="0.030066389590501785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="0rb-Mn-YU6" eventType="touchUpInside" id="hV1-GU-tpe"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your new PIN code" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zew-Xr-ga2">
+                                <rect key="frame" x="32" y="318" width="311" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99564260244369507" green="0.96636444330215454" blue="0.85151320695877075" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zew-Xr-ga2" secondAttribute="trailing" constant="32" id="6GH-4L-Eom"/>
+                            <constraint firstItem="zew-Xr-ga2" firstAttribute="centerY" secondItem="q77-3Y-CfF" secondAttribute="centerY" id="GAn-H3-m5T"/>
+                            <constraint firstItem="1Kn-dZ-mfM" firstAttribute="top" secondItem="qzn-8M-oBN" secondAttribute="bottom" id="M0d-94-L3v"/>
+                            <constraint firstItem="LUX-8G-Ej1" firstAttribute="top" secondItem="QeO-aA-CvM" secondAttribute="bottom" id="NDR-Gr-sdg"/>
+                            <constraint firstItem="QeO-aA-CvM" firstAttribute="width" secondItem="q77-3Y-CfF" secondAttribute="width" id="YcZ-B3-iZw"/>
+                            <constraint firstItem="zew-Xr-ga2" firstAttribute="leading" secondItem="q77-3Y-CfF" secondAttribute="leading" constant="32" id="byg-jf-OEp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="1Kn-dZ-mfM" secondAttribute="leading" id="c5O-nW-Jf3"/>
+                            <constraint firstItem="QeO-aA-CvM" firstAttribute="centerX" secondItem="q77-3Y-CfF" secondAttribute="centerX" id="qN2-If-5yZ"/>
+                            <constraint firstItem="zew-Xr-ga2" firstAttribute="centerX" secondItem="q77-3Y-CfF" secondAttribute="centerX" id="y0Z-36-hkL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pinCodeTextField" destination="zew-Xr-ga2" id="RXT-ME-qLh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KvT-F3-w6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="130"/>
+        </scene>
+    </scenes>
+</document>

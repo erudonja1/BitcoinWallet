@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="teZ-IP-02Z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Reset Pin View Controller-->
+        <scene sceneID="Cjb-uf-VMn">
+            <objects>
+                <viewController storyboardIdentifier="ResetPinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="teZ-IP-02Z" customClass="ResetPinViewController" customModule="BitcoinWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2hr-rK-tOM"/>
+                        <viewControllerLayoutGuide type="bottom" id="cDP-JT-maW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s5z-1I-VYA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old PIN code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XiI-2o-dwp">
+                                <rect key="frame" x="32" y="318" width="311" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New PIN code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wpa-fU-Q1A">
+                                <rect key="frame" x="32" y="380" width="311" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQU-gc-HqB">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.1053804372" green="0.43128906249999999" blue="0.32103651150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Dpg-E3-aT7"/>
+                                </constraints>
+                                <state key="normal" title="Reset PIN">
+                                    <color key="titleColor" red="0.95664626359939575" green="0.81692922115325928" blue="0.030066389590501785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPinButtonPressed:" destination="teZ-IP-02Z" eventType="touchUpInside" id="byp-Me-Obv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99564260240000002" green="0.96636444330000004" blue="0.85151320699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XiI-2o-dwp" firstAttribute="centerX" secondItem="s5z-1I-VYA" secondAttribute="centerX" id="BV5-uV-mdA"/>
+                            <constraint firstItem="XiI-2o-dwp" firstAttribute="centerY" secondItem="s5z-1I-VYA" secondAttribute="centerY" id="BwC-tK-rF2"/>
+                            <constraint firstItem="Wpa-fU-Q1A" firstAttribute="leading" secondItem="s5z-1I-VYA" secondAttribute="leadingMargin" constant="16" id="JVh-a6-IgI"/>
+                            <constraint firstItem="aQU-gc-HqB" firstAttribute="centerX" secondItem="s5z-1I-VYA" secondAttribute="centerX" id="Jmt-nO-iU3"/>
+                            <constraint firstItem="Wpa-fU-Q1A" firstAttribute="top" secondItem="XiI-2o-dwp" secondAttribute="bottom" constant="32" id="K5m-wh-KRa"/>
+                            <constraint firstItem="aQU-gc-HqB" firstAttribute="width" secondItem="s5z-1I-VYA" secondAttribute="width" id="NYM-lt-qUi"/>
+                            <constraint firstItem="XiI-2o-dwp" firstAttribute="leading" secondItem="s5z-1I-VYA" secondAttribute="leadingMargin" constant="16" id="UC1-KJ-7Hw"/>
+                            <constraint firstItem="cDP-JT-maW" firstAttribute="top" secondItem="aQU-gc-HqB" secondAttribute="bottom" id="d7v-h9-g49"/>
+                            <constraint firstItem="Wpa-fU-Q1A" firstAttribute="centerX" secondItem="s5z-1I-VYA" secondAttribute="centerX" id="gbM-Dn-m7k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XiI-2o-dwp" secondAttribute="trailing" constant="16" id="kbl-cT-lTN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wpa-fU-Q1A" secondAttribute="trailing" constant="16" id="xln-WF-gQi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newPinCodeTextField" destination="Wpa-fU-Q1A" id="BpF-Sy-AK7"/>
+                        <outlet property="oldPinCodeTextField" destination="XiI-2o-dwp" id="Lqd-0V-SM4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LE5-iH-wBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-105" y="152"/>
+        </scene>
+    </scenes>
+</document>
