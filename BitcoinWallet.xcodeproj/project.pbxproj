@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042D01DA202C11F400424CFF /* WalletService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D01D9202C11F400424CFF /* WalletService.swift */; };
+		042D01DE202C202500424CFF /* KeyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D01DD202C202500424CFF /* KeyGenerator.swift */; };
 		0441B75D202A3254008E75A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0441B75C202A3254008E75A3 /* Main.storyboard */; };
 		0441B75F202A34B1008E75A3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0441B75E202A34B1008E75A3 /* Login.storyboard */; };
 		0441B761202A34CA008E75A3 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0441B760202A34CA008E75A3 /* Registration.storyboard */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042D01D9202C11F400424CFF /* WalletService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletService.swift; sourceTree = "<group>"; };
+		042D01DD202C202500424CFF /* KeyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyGenerator.swift; sourceTree = "<group>"; };
 		0441B75C202A3254008E75A3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0441B75E202A34B1008E75A3 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0441B760202A34CA008E75A3 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 		0441B750202A2E9F008E75A3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				042D01D9202C11F400424CFF /* WalletService.swift */,
 				04F031A2202A5C2300CD6FA7 /* NetworkServices */,
 				04F031A1202A5C1A00CD6FA7 /* DAOServices */,
 			);
@@ -288,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				04F031AD202A6ABA00CD6FA7 /* AlertCenter.swift */,
+				042D01DD202C202500424CFF /* KeyGenerator.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -533,9 +539,11 @@
 				04F031C4202ADC9A00CD6FA7 /* WalletManager.swift in Sources */,
 				0441B765202A350B008E75A3 /* RegistrationViewController.swift in Sources */,
 				04F031B3202A6FF300CD6FA7 /* RegistrationViewModel.swift in Sources */,
+				042D01DE202C202500424CFF /* KeyGenerator.swift in Sources */,
 				04F031C6202AE5A300CD6FA7 /* HomeViewModel.swift in Sources */,
 				04F031B1202A6E7A00CD6FA7 /* LoginViewModel.swift in Sources */,
 				04F031A0202A5AAF00CD6FA7 /* UserManager.swift in Sources */,
+				042D01DA202C11F400424CFF /* WalletService.swift in Sources */,
 				04F031C2202A7BEA00CD6FA7 /* ResetPinViewModel.swift in Sources */,
 				04F031A4202A5C4B00CD6FA7 /* UserDAO.swift in Sources */,
 				0441B763202A34EB008E75A3 /* LoginViewController.swift in Sources */,
@@ -637,6 +645,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "BitcoinWallet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -680,6 +689,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "BitcoinWallet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

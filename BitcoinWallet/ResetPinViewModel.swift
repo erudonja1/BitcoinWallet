@@ -33,7 +33,7 @@ class ResetPinViewModel {
             return
         }
         
-        if userManager.checkIsCorrectPin(for: newValue).status == .success{
+        if userManager.checkIsCorrectPin(for: oldValue).status == .success{
             userManager.setPin(newPinCode: newValue)
             self.succedeedAttempt()
         }else{

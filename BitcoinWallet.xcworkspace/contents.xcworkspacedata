@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:BitcoinWallet-Bridging-Header.h">
+   </FileRef>
+   <FileRef
       location = "group:BitcoinWallet.xcodeproj">
    </FileRef>
    <FileRef

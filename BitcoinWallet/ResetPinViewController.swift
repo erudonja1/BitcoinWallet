@@ -34,9 +34,15 @@ class ResetPinViewController: UIViewController, ResetPinViewProtocol{
         if let navigationDelegate = navigationDelegate{
             navigationDelegate.resetFinished()
         }
+        AlertCenter.show(title: "Done", message: "New password has been set.", buttonText: "Ok", viewController: self)
     }
     func resetFailed(errorMessage: String){
         AlertCenter.show(title: "Error", message: errorMessage, buttonText: "Ok", viewController: self)
     }
     
+    @IBAction func closeButtonPressed(_ sender: UIButton) {
+        if let navigationDelegate = navigationDelegate{
+            navigationDelegate.closeApplication()
+        }
+    }
 }

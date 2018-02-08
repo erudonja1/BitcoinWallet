@@ -39,6 +39,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         if let walletHasPrivateKey = viewModel?.walletHasPrivateKey(){
             self.setupView(walletHasPrivateKey)
         }
+         AlertCenter.show(title: "Done", message: "New address has been set.", buttonText: "Ok", viewController: self)
     }
     
     func insertPIN(title: String) {
@@ -77,7 +78,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         
         if (walletHasPrivateKey == true){
             
-            walletAddressLabel.text = "--" // get the real address
+            walletAddressLabel.text = self.viewModel?.getAddress()
             generateAddressButton.isHidden = true
             
             walletKeyLabel.text = "**************"

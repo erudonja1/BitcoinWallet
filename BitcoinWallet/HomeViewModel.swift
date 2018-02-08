@@ -68,4 +68,10 @@ class HomeViewModel{
             output?.showError(errorMessage: "Incorrect PIN code.")
         }
     }
+    
+    func getAddress() -> String{
+        let walletManager = WalletManager()
+        let address = walletManager.getAddress()
+        return (address.isEmpty) ? "--" : address
+    }
 }
